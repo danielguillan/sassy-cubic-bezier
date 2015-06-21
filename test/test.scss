@@ -1,0 +1,23 @@
+@import 'true';
+@import '../stylesheets/_cubic-bezier';
+
+@include test-module('cubic-bezier') {
+
+    @include test('Retrieve default easing function [function]') {
+        $value: map-get($cubic-bezier, 'linear');
+
+        $test: cubic-bezier('linear');
+        $expect: unquote('cubic-bezier(#{$value})');
+
+        @include assert-equal($test, $expect,'Returns the values of a default cubic-bezier function');
+    }
+
+    @include test('Return custom function [function]') {
+        $value: (1, 2, 3, 4);
+
+        $test: cubic-bezier($value);
+        $expect: unquote('cubic-bezier(#{$value})');
+
+        @include assert-equal($test, $expect,'Returns the same values');
+    }
+}

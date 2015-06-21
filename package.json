@@ -1,0 +1,27 @@
+{
+  "name": "sass-cubic-bezier",
+  "author": "Daniel Guillan",
+  "version": "0.1.0",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danielguillan/sass-cubic-bezier"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/danielguillan/sass-cubic-bezier/issues"
+  },
+  "homepage": "https://github.com/danielguillan/sass-cubic-bezier",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-bump": "^0.3.0",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-mocha-test": "^0.12.7",
+    "grunt-sass": "^1.0.0",
+    "mocha": "^2.2.5",
+    "sass-true": "^2.0.2"
+  }
+}

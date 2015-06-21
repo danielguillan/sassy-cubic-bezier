@@ -1,0 +1,12 @@
+language: node_js
+branches:
+  only:
+    - master
+    - tests
+git:
+  depth: 1
+node_js:
+  - '0.10'
+env:
+before_script:
+  - npm install -g grunt-cli

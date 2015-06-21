@@ -1,0 +1,6 @@
+{
+    "name": "sass-cubic-bezier",
+    "version": "0.1.0",
+    "main": "dist/_cubic-bezier.scss",
+    "author": "Daniel Guillan",
+}
