@@ -20,12 +20,12 @@ Download [_cubic-bezier.scss](/stylesheets/_cubic-bezier.scss) and place it in y
 
 Run the following command:
 
-    bower install --save-dev sassy
+    bower install --save-dev sassy-cubic-bezier
 
 ### Compass
 
-1. `gem install sassy`
-2. Add `require 'cubic-bezier'` to your `config.rb`
+1. `gem install sassy-cubic-bezier`
+2. Add `require 'sassy-cubic-bezier'` to your `config.rb`
 
 ## Usage
 
