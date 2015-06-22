@@ -22,27 +22,42 @@ Run the following command:
 
     bower install --save-dev sass-cubic-bezier
 
+### Compass
+
+1. `gem install sass-cubic-bezier`
+2. Add `require 'cubic-bezier'` to your `config.rb`
+
 ## Usage
 
 Import it into your main stylesheet:
 
     @import 'cubic-bezier';
 
-### Adding new functions or updating existing ones
+Just use cubic-bezier() as you normally would in your animations and transitions with the added ability to pass named easing functions:
+
+````scss
+    .my-transition { transition: all 1s cubic-bezier('easeInOutBack'); }
+    .my-animation  { animation: fade-in 1s cubic-bezier('easeInQuint'); }
+    .manual        { transition: fade-in 1s cubic-bezier(1, 2, 3, 4); }
+````
+
+### Adding functions and updating default ones
 
 ````scss
 $my-easing-functions: (
-  'custom': (1, 2, 3, 4), // new function
-  'easeOutSine': (0.470, 0.000, 0.745, 0.715) // updated function
+  'custom': (1, 2, 3, 4),                     // add new function
+  'easeOutSine': (0.470, 0.000, 0.745, 0.715) // update default function
 );
 
-$cubic-bezier: map-merge($cubic-bezier, $my-easing-functions) !global;
+$cubic-bezier-functions: map-merge($cubic-bezier-functions, $my-easing-functions) !global;
 ````
 
 ### Overriding the built-in functions list
 
+Completely remove the built-in functions and replace them with your own list:
+
 ````scss
-$cubic-bezier: (
+$cubic-bezier-functions: (
   'customOne': (1, 2, 3, 4)
   'customTwo': (4, 3, 2, 1)
 ) !global;
@@ -50,8 +65,10 @@ $cubic-bezier: (
 
 ## Built-in easing functions
 
+The built-in easing functions are based on Robert Penner's original equations:
+
 ````scss
-$cubic-bezier:  (
+$cubic-bezier-functions:  (
     'linear'         : (0.250, 0.250, 0.750, 0.750),
     'ease'           : (0.250, 0.100, 0.250, 1.000),
     'ease-in'        : (0.420, 0.000, 1.000, 1.000),
@@ -86,5 +103,4 @@ $cubic-bezier:  (
     'easeInOutBack'  : (0.680, -0.550, 0.265, 1.550),
 
 );
-
 ````

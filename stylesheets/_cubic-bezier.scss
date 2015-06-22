@@ -1,7 +1,10 @@
 // -----------------------------------------------------------------------------
 // cubic-bezier
 // -----------------------------------------------------------------------------
-// Table of contents
+////
+/// @author Daniel Guillan
+////
+// Table of contents:
 // 1. Default easing functions
 // 2. cubic-bezier function
 
@@ -10,10 +13,10 @@
 // 1. Default easing functions
 // -----------------------------------------------------------------------------
 /// Default cubic bezier functions
-/// @private
+/// @type Map
 /// @author Robert Penner
 
-$cubic-bezier:  (
+$cubic-bezier-functions:  (
     'linear'         : (0.250, 0.250, 0.750, 0.750),
     'ease'           : (0.250, 0.100, 0.250, 1.000),
     'ease-in'        : (0.420, 0.000, 1.000, 1.000),
@@ -54,23 +57,28 @@ $cubic-bezier:  (
 // 2. cubic-bezier function
 // -----------------------------------------------------------------------------
 /// Retrieve a cubic-bezier function by name or return the custom value.
-/// @param {Arglist} $elements - List of values or cubic-bezier function name
-/// @returns cubic-bezier function values
+/// @param {Arglist} $value - List of values or cubic-bezier function name
+/// @return {Map} cubic-bezier function values
+/// @example scss - Cubic Bezier function
+///   cubic-bezier('easeInOutBack')
+///   // cubic-bezier(0.680, -0.550, 0.265, 1.550)
 
 @function cubic-bezier($value...) {
 
     @if length($value) == 1 and type-of(nth($value, 1)) == 'string' {
-        $cubic-bezier-name: nth($value, 1);
 
-        @if map-has-key($cubic-bezier, $cubic-bezier-name) {
-            $values: map-get($cubic-bezier, $cubic-bezier-name);
-            @return unquote('cubic-bezier(#{$values})');
-        } @else {
-            @error '[cubic-bezier]: `#{$cubic-bezier-name}` is not a valid cubic-bezier function name';
+        // Store the function name passed in `$value...`
+        $cubic-bezier-function-name: nth($value, 1);
+
+        // Get the values for the passed function name
+        $value: map-get($cubic-bezier-functions, $cubic-bezier-function-name);
+
+        // Throw an error if function name is not defined in the
+        // `$cubic-bezier-functions` lists
+        @if not map-has-key($cubic-bezier-functions, $cubic-bezier-function-name) {
+            @error '[cubic-bezier]: `#{$cubic-bezier-function-name}` is not a valid cubic-bezier function name';
         }
-    } @else if type-of($value) == 'arglist' or type-of($value) == 'list' {
-        @return unquote('cubic-bezier(#{$value})');;
-    } @else {
-        @error '[cubic-bezier]: `#{$value}` is not a valid cubic-bezier value';
     }
+
+    @return unquote('cubic-bezier(#{$value})');
 }

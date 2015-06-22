@@ -4,7 +4,7 @@
 @include test-module('cubic-bezier') {
 
     @include test('Retrieve default easing function [function]') {
-        $value: map-get($cubic-bezier, 'linear');
+        $value: map-get($cubic-bezier-functions, 'linear');
 
         $test: cubic-bezier('linear');
         $expect: unquote('cubic-bezier(#{$value})');

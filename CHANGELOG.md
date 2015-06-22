@@ -1,3 +1,9 @@
+## 0.2.0
+
+* Code quality
+* Renamed `$cubic-bezier` to `$cubic-bezier-functions`
+* Add Compass extension
+
 ## 0.1.0
 
 * Initial release
