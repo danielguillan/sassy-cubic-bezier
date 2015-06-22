@@ -1,4 +1,4 @@
-# Sass cubic-bezier [![Build Status](https://travis-ci.org/danielguillan/sass-cubic-bezier.svg?branch=master)](https://travis-ci.org/danielguillan/sass-cubic-bezier) [![Bower version](https://badge.fury.io/bo/sass-cubic-bezier.svg)](http://badge.fury.io/bo/sass-cubic-bezier) [![Gem Version](https://badge.fury.io/rb/sass-cubic-bezier.svg)](http://badge.fury.io/rb/sass-cubic-bezier)
+# sassy-cubic-bezier [![Build Status](https://travis-ci.org/danielguillan/sassy-cubic-bezier.svg?branch=master)](https://travis-ci.org/danielguillan/sassy-cubic-bezier) [![Bower version](https://badge.fury.io/bo/sassy-cubic-bezier.svg)](http://badge.fury.io/bo/sassy-cubic-bezier) [![Gem Version](https://badge.fury.io/rb/sassy-cubic-bezier.svg)](http://badge.fury.io/rb/sassy-cubic-bezier)
 
 A Sass function that extends the CSS cubic-bezier() notation to allow for (predefined) named easing functions.
 
@@ -20,11 +20,11 @@ Download [_cubic-bezier.scss](/stylesheets/_cubic-bezier.scss) and place it in y
 
 Run the following command:
 
-    bower install --save-dev sass-cubic-bezier
+    bower install --save-dev sassy
 
 ### Compass
 
-1. `gem install sass-cubic-bezier`
+1. `gem install sassy`
 2. Add `require 'cubic-bezier'` to your `config.rb`
 
 ## Usage

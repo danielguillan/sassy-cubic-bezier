@@ -1,3 +1,7 @@
+## 0.3.0
+
+* Renamed project to sassy-cubic-bezier
+
 ## 0.2.0
 
 * Code quality

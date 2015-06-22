@@ -1,5 +1,5 @@
 {
-  "name": "sass-cubic-bezier",
+  "name": "sassy-cubic-bezier",
   "author": "Daniel Guillan",
   "version": "0.2.0",
   "scripts": {
@@ -7,13 +7,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/danielguillan/sass-cubic-bezier"
+    "url": "https://github.com/danielguillan/sassy-cubic-bezier"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/danielguillan/sass-cubic-bezier/issues"
+    "url": "https://github.com/danielguillan/sassy-cubic-bezier/issues"
   },
-  "homepage": "https://github.com/danielguillan/sass-cubic-bezier",
+  "homepage": "https://github.com/danielguillan/sassy-cubic-bezier",
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-bump": "^0.3.0",

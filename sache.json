@@ -1,5 +1,5 @@
 {
-  "name": "Sass Cubic Bezier",
+  "name": "sassy-cubic-bezier",
   "description": "A Sass function that extends the CSS cubic-bezier() notation to allow for (predefined) named easing functions",
   "tags": ["css", "easing", "timing functions", "extension", "cubic-bezier", "transitions", "animation", "penner"]
 }

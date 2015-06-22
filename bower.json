@@ -1,5 +1,5 @@
 {
-    "name": "sass-cubic-bezier",
+    "name": "sassy-cubic-bezier",
     "version": "0.2.0",
     "main": "dist/_cubic-bezier.scss",
     "author": "Daniel Guillan"

@@ -6,13 +6,13 @@ Gem::Specification.new do |s|
   s.date = CubicBezier::DATE
 
   # Gem Details
-  s.name = "sass-cubic-bezier"
-  s.rubyforge_project = "sass-cubic-bezier"
+  s.name = "sassy-cubic-bezier"
+  s.rubyforge_project = "sassy-cubic-bezier"
   s.description = %q{A Sass function that extends the CSS cubic-bezier() notation to allow for (predefined) named easing functions}
   s.summary = %q{}
   s.authors = ["Daniel Guillan"]
   s.email = ["daniel.guillan@gmail.com"]
-  s.homepage = "https://github.com/danielguillan/sass-cubic-bezier"
+  s.homepage = "https://github.com/danielguillan/sassy-cubic-bezier"
 
   # LICENSE file
   s.licenses = ['MIT']
