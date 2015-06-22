@@ -5,7 +5,6 @@ module.exports = function(grunt) {
     grunt.initConfig({
          dir : {
             src : 'stylesheets',
-            dist : 'dist'
         },
         pkg: grunt.file.readJSON('package.json'),
         watch: {
@@ -24,11 +23,11 @@ module.exports = function(grunt) {
         },
         bump: {
             options: {
-                files: ['package.json', 'bower.json', 'lib/bem-constructor.rb', 'dist/_bem-constructor.scss'],
+                files: ['package.json', 'bower.json', 'lib/cubic-bezier.rb'],
                 updateConfigs: [],
                 commit: true,
                 commitMessage: 'Bump version %VERSION%',
-                commitFiles: ['package.json', 'bower.json', 'lib/bem-constructor.rb', 'dist/_bem-constructor.scss'],
+                commitFiles: ['package.json', 'bower.json', 'lib/cubic-bezier.rb'],
                 createTag: true,
                 tagName: 'v%VERSION%',
                 tagMessage: 'Version %VERSION%',
@@ -51,6 +50,6 @@ module.exports = function(grunt) {
     grunt.registerTask('dev', ['mochaTest', 'watch']);
 
     var versionBump = grunt.option('versionBump') || 'minor';
-    grunt.registerTask('release', ['build', 'bump-only:' + versionBump, 'bump-commit']);
+    grunt.registerTask('release', ['bump-only:' + versionBump, 'bump-commit']);
 }
 
