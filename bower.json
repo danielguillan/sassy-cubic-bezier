@@ -1,6 +1,6 @@
 {
     "name": "sassy-cubic-bezier",
-    "version": "0.3.0",
+    "version": "0.4.0",
     "main": "stylesheets/_cubic-bezier.scss",
     "author": "Daniel Guillan",
     "ignore": "[]"
