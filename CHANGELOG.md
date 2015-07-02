@@ -1,3 +1,7 @@
+## 0.4.0
+
+* Fix typo in bower.json
+
 ## 0.3.0
 
 * Renamed project to sassy-cubic-bezier
